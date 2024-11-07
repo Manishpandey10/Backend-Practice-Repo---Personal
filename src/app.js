@@ -1,9 +1,12 @@
 import express from "express";
+import cors from "cors"
 import CheckRouter from "./routes/healthCheck.Routes.js"
 
 const app= express();
 
-
+app.use(cors({
+    origin:process.env.CORS_ORIGIN,credential:true
+}))
 //common middlewares i used here
 
 app.use(express.json({limit:"24kb"}))
