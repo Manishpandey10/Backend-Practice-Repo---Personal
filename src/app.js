@@ -20,7 +20,7 @@ app.use(express.static("public"))
 //In app.js, when we use app.use("/api/v1/gethealth", CheckRouter), we're telling Express to use the CheckRouter for any requests that start with the /api/v1/gethealth path. This means that the CheckRouter will handle all routes under that path, not just the root (/) path.
 // in this app.use checkROuter will handle every request in this "api/...." ,
 app.use("/api/v1/gethealth",CheckRouter)
-/*********************************************** */
+/***********************************************/
 
 app.get("/test2",(req,res)=>{res.send("hello from app.js")})
 //checking the get request onmy postman^|^
